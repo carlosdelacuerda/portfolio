@@ -7,16 +7,10 @@ import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
-import {
-  BrowserRouter as Router,
-  Link
-} from "react-router-dom";
-
 const pages = ['Portfolio', 'About'];
 
-function ResponsiveAppBar() {
+function HeaderResponsive() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
@@ -103,19 +97,9 @@ function ResponsiveAppBar() {
           >
             C DE LA CUERDA
           </Typography>
-          <Box className='just-end' sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex', marginLeft: 'auto' } }}>
-            <Router>
-              <Button sx={{ my: 2, color: 'white', display: 'flex' }}>
-                  <Link to="/">Home</Link>
-              </Button>
-              <Button sx={{ my: 2, color: 'white', display: 'flex' }}>
-                  <Link to="about">About</Link>
-              </Button>
-            </Router>
-          </Box>
         </Toolbar>
       </Container>
     </AppBar>
   );
 }
-export default ResponsiveAppBar;
+export default HeaderResponsive;

@@ -23,3 +23,11 @@ code {
   text-align: center;
   color: rgb(93, 93, 93);
 }
+
+.signature {
+  height: 80px;
+}
+
+.about-me {
+  padding: 40px;
+}
